@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500&display=swap');
+/************************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL STYLES
+ * -- 1a. General layout classes
+ * 2. HEADER
+ * 3. MENU
+ * 4. MAIN AREA
+ * -- 4a. Link Style
+ * -- 4b. Responsive images
+ * 5. FOOTER
+ * 6. MEDIA QUERIES
+ * -- 6a. Tablet Layout
+ * -- 6b. Mobile Layout
+ ************************************************************************/
+
+/* 1. GENERAL STYLES */
+html {
+  box-sizing:border-box;
+}
+*, *::before, *::after {
+  box-sizing:inherit;
+}
+body {
+  font:normal 1.1em/1.5em 'League Spartan',sans-serif;
+  font-weight:300;
+  margin:0;
+  background-color:#fffbf1; /* off-white to warm the page */
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'League Spartan',sans-serif;
+  font-weight:500;
+}
+.adjust-line-height {
+  line-height:0.1em;
+}
+.adjust-line-height-copyright {
+  line-height:5em;
+}
+a {
+  color:#820333;
+}
+/* -- 1a. General layout classes */
+.page-container {
+  max-width:1200px;
+  margin:0 auto;
+}
+.hidden {
+  position:absolute;
+  left:-10000px;
+  width:1px;
+  height:1px;
+}
+.flex-container {
+  display:flex;
+  flex-flow:row wrap;
+  gap:1em;
+}
+button, a.button, .button {
+  background-color:#f0433a;
+  color:#fff !important; /* !important ensures this will always be enforced */
+  text-transform:uppercase;
+  text-decoration:none !important;
+  padding:0.5em 0.8em;
+  border:none;
+  border-radius:20px;
+  font-size:0.8em;
+}
+button:hover, a.button:hover, .button:hover {
+  background-color:#c9283e;
+}
+/* 2. HEADER */
+
+#header {
+  background-color:#FFA500;
+  margin-bottom:2em;
+}
+#header > .page-container {
+  padding:1em; /* Contents to have some padding also main-menu background
+  color goes all the way across the page width */
+}
+#header a {
+  color:#fff;
+  text-decoration:none;
+}
+#header a:hover {
+  color:#c9283e;
+}
+/* 3. MENU */
+#main-menu {
+  background-color:#FF8C00;
+}
+#main-menu a {
+  font-size:1.15em;
+}
+#main-menu a:hover {
+  color:#260f25;
+}
+.menu {
+  padding:0 1em;
+  font-family:'League Spartan',sans-serif;
+  font-weight:500;
+}
+.menu li {
+  display:inline-block;
+  list-style-type:none;
+  margin-right:1.7em;
+  vertical-align:top;
+  text-transform:uppercase;
+  padding:0.5em 0;
+}
+/* 4. MAIN AREA */
+
+#main {
+  padding:1em; /* some space for the content */
+  flex:2 0 0;
+}
+.float-container {
+    padding: 20px;
+}
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}  
+#sidebar {
+  padding:1em; /* some space for the content */
+  flex:1 0 0;
+}
+#main, #sidebar {
+  margin-bottom:1em;
+}
+/* --4a. LINK STYLE */
+a, a:link {
+  color:#820333;
+}
+a:visited {
+  color:#FFFFFF;
+}
+a:hover {
+  color:#260f25;
+}
+a:active {
+  color:#FFA500;
+}
+
+/* --4b. Responsive images */
+img {
+  /* make images responsive */
+  max-width:85%;
+  height:auto; /* auto-calculate height based on width */
+}
+.left {
+  /* make images responsive */
+  float:left;
+  max-width:55%;
+  margin:0 0.5em;
+  height:auto; /* auto-calculate height based on width */
+}
+/* 5. FOOTER */
+#footer {
+  clear:both;
+  background-color:#FF8C00;
+  color:#fff;
+  font-size:0.8em;
+  padding:1em 0;
+}
+/* 6. MEDIA QUERIES */
+/* --6a. Tablet Layout */
+/* 768px is a common tablet breakpoint (portrait) */
+@media screen and (max-width:768px) {
+  #main, #sidebar {
+    flex:1 0 100%; /* set flex-basis to 100 */
+  }
+}
+@media screen and (max-width:768px) {
+  .featured-article {
+    flex:1 0 45%;
+  }
+}
+/* --6b.  Mobile Layout */
+/* 480px is a common mobile breakpoint (landscape) */
+@media screen and (max-width:480px) {
+  .featured-article {
+    flex:1 0 100%;
+  }
+}
+@media screen and (max-width:480px) {
+  .menu li {
+    display:block;
+  }
+}
