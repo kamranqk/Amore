@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500&display=swap');
+/************************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL STYLES
+ * -- 1a. General layout classes
+ * 2. HEADER
+ * 3. MENU
+ * 4. MAIN AREA
+ * -- 4a. Link Style
+ * -- 4b. Responsive images
+ * 5. FOOTER
+ * 6. MEDIA QUERIES
+ * -- 6a. Tablet Layout
+ * -- 6b. Mobile Layout
+ ************************************************************************/
+
+/* 1. GENERAL STYLES */
+
+/*
+ :root{
+    --font-default: 'Cormorant Garamond', serif;
+    --dark-bg: #302E2E;
+    --light: #EFEFEF;
+    --dark-text: #010101;
+    --almost-black: #1C1C1C;
+    --light-gray: #C5C0C0;
+    --dark-gray: #747070;
+    
+    
+    --wheat: #F4F1DE;
+    --barley: #E8B056;
+    --pastel: #FF9B54;
+    --tomato: #BF4342;
+    --chipotle: #F48C06;
+    --cherries: #DC2F02;
+    --beetroot: #370617;
+    --leather: #85644E;
+    --mud: #9C856B;
+    
+}
+
+*/
+/*typography*/
+/*
+.hero_text{
+    font-weight: 700;
+    font-size: 32px;
+    opacity: 0.9;
+}
+
+.title_text{
+    font-weight: 700;
+    font-size: 26px;
+    opacity: 0.9;
+}
+
+.subtitle_text{ 
+    font-weight: 700;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.caption_text{ 
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0.8;
+}
+.body_text{
+    font-weight: 500;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.muted_text{
+    font-weight: 500;
+    font-size: 13px;
+    opacity: 0.5;
+} */
+.toplogo {
+  float:left;
+  margin:0 0.5em;
+  height:auto; /* auto-calculate height based on width */
+}
+html {
+  box-sizing:border-box;
+}
+*, *::before, *::after {
+  box-sizing:inherit;
+} 
+body {
+  font:normal 1.1em/1.5em 'League Spartan',sans-serif;
+  font-weight:300;
+  margin:0;
+ 
+/*background-image: url("hero_hd_image.png"); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  color: #FFFFFF;  */
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'League Spartan',sans-serif;
+  font-weight:300;
+}
+.adjust-line-height {
+  line-height:0.1em;
+}
+.adjust-line-height-copyright {
+  text-align:center;
+  line-height:5em;
+}
+a {
+  color:#820333;
+}
+
+/* -- 1a. General layout classes */
+
+.page-container {
+  max-width:1200px;
+  margin:0 auto;
+}
+.hidden {
+  position:absolute;
+  left:-10000px;
+  width:1px;
+  height:1px;
+}
+.flex-container {
+  display:flex;
+  flex-flow:row wrap;
+  gap:1em;
+}
+button, a.button, .button {
+ /*  background-color: var(--dark-gray);
+  color: rgba(255,255,255,0.8); */
+  background-color:#FFA500;
+  color:#fff !important; !important ensures this will always be enforced
+  text-transform:capitalize; 
+  text-decoration:none !important;
+  padding:0.5em 0.8em; 
+  border:none;
+  border-radius:4px;
+  font-family:'League Spartan',sans-serif;
+  font-size:18px;
+  /* padding: 10px; */
+}
+
+button:hover, a.button:hover, .button:hover {
+  background-color: var(--pastel);
+  color: rgba(0,0,0,0.8);
+} 
+.center{
+  text-align: center;
+}
+.see-full-menu{
+  text-align: center;
+}
+}
+/* 2. HEADER */
+
+#header {
+  margin-bottom:2em; 
+}
+#header > .page-container {
+  padding:1em; /* Contents to have some padding also main-menu background
+  color goes all the way across the page width */
+}
+#header a {
+  color:#fff;
+  text-decoration:none;
+  
+}
+#header a:hover {
+  color:#c9283e;
+}
+
+/* 3. MENU */
+
+#main-menu {
+  text-align:center; 
+}
+#main-menu a {
+  font-size:1.15em
+}
+#main-menu a:hover {
+  color:#260f25;
+}
+.menu {
+  padding:0 1em;
+  font-family:'League Spartan',sans-serif;
+  font-weight:500;
+  margin-left:10em;
+}
+.menu li {
+  display:inline-block;
+  list-style-type:none;
+  margin-right:1.7em; 
+  vertical-align:top;
+  text-transform:capitalize;
+  padding:1.5em 0;  
+}
+
+/* 4. MAIN AREA */
+
+#main {
+  padding:1em; /* some space for the content */
+  flex:2 0 0;
+}
+.float-container {
+  padding: 20px;
+}
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+}  
+#sidebar {
+  padding:1em; /* some space for the content */
+  flex:1 0 0;
+}
+#main, #sidebar {
+  margin-bottom:1em;
+}
+
+/* --4a. LINK STYLE */
+
+a, a:link {
+  color:#820333;
+}
+a:visited {
+  color:#FFFFFF;
+}
+a:hover {
+  color:#260f25;
+}
+a:active {
+  color:#FFA500;
+}
+/* --4b. Responsive images */
+img {
+  /* make images responsive */
+  max-width:85%;
+  height:auto; /* auto-calculate height based on width */
+}
+.left {
+  /* make images responsive */
+  float:left;
+  max-width:55%;
+  margin:0 0.5em;
+  height:auto; /* auto-calculate height based on width */
+}
+
+/* 5. FOOTER */
+
+#footer {
+  color:#fff;
+  font-size:0.8em;
+  padding:1em 0;
+}
+#footer-menu {
+  margin-left:10em; 
+  vertical-align:top;
+  text-transform:capitalize;
+  padding:1.7em 0; 
+}
+/* 6. MEDIA QUERIES */
+/* --6a. Tablet Layout */
+/* 768px is a common tablet breakpoint (portrait) */
+@media screen and (max-width:768px) {
+  #main, #sidebar {
+    flex:1 0 100%; /* set flex-basis to 100 */
+  }
+}
+@media screen and (max-width:768px) {
+  .featured-article {
+    flex:1 0 45%;
+  }
+}
+/* --6b.  Mobile Layout */
+/* 480px is a common mobile breakpoint (landscape) */
+@media screen and (max-width:480px) {
+  .featured-article {
+    flex:1 0 100%;
+  }
+}
+@media screen and (max-width:480px) {
+  .menu li {
+    display:block;
+  }
+}
