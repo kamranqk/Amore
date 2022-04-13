@@ -439,6 +439,10 @@ margin-left: 200px;
 .image-grid{
     display: grid;
     grid-template-columns: 50% 50%;
+    width: fit-content;
+}
+
+.image-grid-wrapper{
     width: 80%;
     margin: auto;
 }
@@ -491,6 +495,25 @@ input{
 
 .form-warning{
     width: 500px;
+}
+
+.image-grid-wrapper .instagram-btn{
+    position: relative;
+    bottom: 50px;
+    margin-left: auto;
+    margin-right: 0;
+    right: 5px;
+    width: 30%;
+    background-color: var(--light-gray);
+    color: var(--dark-text);
+}
+
+.image-grid-wrapper .instagram-btn:hover{
+    background-color: var(--barley);
+}
+
+.instagram-btn span{
+    margin: 0 10px;
 }
 
 /* MOBILE RESPONSIVE */
