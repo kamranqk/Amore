@@ -200,13 +200,15 @@ body{
 }
 
 .title-text{
-/* margin-left: 730px; */	
+/* margin-left: 730px; */
+/* margin-left: 430px; */
 margin: auto;
 }
 
 .subtitle-text{
-/* margin-left: 430px; */	
+	
 margin: auto;
+	
 }
 
 #diy-kits{
