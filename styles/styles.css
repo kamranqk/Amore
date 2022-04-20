@@ -199,15 +199,14 @@ body{
     justify-content: center;
 }
 
-.title-text{
+#amore-title-text{
  margin-left: 730px; 
 /*margin: auto;*/
 }
 
-.subtitle-text{
+#amore-subtitle-text{
 margin-left: 730px; 	
-/*margin: auto;*/
-	
+/*margin: auto;*/	
 }
 
 #diy-kits{
