@@ -199,12 +199,12 @@ body{
     justify-content: center;
 }
 
-#amore-title-text{
+.title-text{
 /* margin-left: 730px; */	
 margin: auto;
 }
 
-#amore-subtitle-text{
+.subtitle-text{
 /* margin-left: 430px; */	
 margin: auto;
 }
