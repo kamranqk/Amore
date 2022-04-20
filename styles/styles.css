@@ -200,14 +200,13 @@ body{
 }
 
 .title-text{
-/* margin-left: 730px; */
-/* margin-left: 430px; */
-margin: auto;
+ margin-left: 730px; 
+/*margin: auto;*/
 }
 
 .subtitle-text{
-	
-margin: auto;
+margin-left: 730px; 	
+/*margin: auto;*/
 	
 }
 
